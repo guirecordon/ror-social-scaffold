@@ -12,8 +12,19 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 
-  has_many :friendships
-  has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
+  # has_many :friendships
+  # has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
+
+  has_many :active_relationships, class_name:  "Friendship",
+                                  foreign_key: "friend_id",
+                                  dependent:   :destroy
+  has_many :passive_relationships, class_name:  "Friendship",
+                                  foreign_key: "user_id",
+                                  dependent:   :destroy
+  has_many :following, through: :active_relationships, source: :friend
+  has_many :followers, through: :passive_relationships, source: :user
+
+  
 
   def friends
     friends_array = friendships.map { |friendship| friendship.friend if friendship.confirmed }

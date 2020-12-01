@@ -1,12 +1,11 @@
 class Friendship < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, class_name: 'User'
   belongs_to :friend, class_name: 'User'
+  validates :user_id, presence: true
+  validates :friend_id, presence: true
 
-  # validates_presence_of :user_id
-  # validates_presence_of :friend_id
-  validates_presence_of :confirmed
 
-  def accepted
-    update(confirmed: true)
-  end
+  # def accepted
+  #   update(confirmed: true)
+  # end
 end
