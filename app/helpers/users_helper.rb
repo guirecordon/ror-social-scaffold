@@ -20,7 +20,7 @@ module UsersHelper
     end
   end
 
-  def mutual_friends(mutual1,mutual2)
+  def mutual_friends(mutual1, mutual2)
     mutual = []
     mutual1.each do |x|
       mutual1 << x if mutual2.include?(x)
