@@ -31,6 +31,11 @@ class User < ApplicationRecord
     friends.include?(user)
   end
 
+  def mutual_friends
+    friends_array = friendships.map { |friendship| friendship.friend if friendship.confirmed }
+    friends_array.compact
+  end
+
   private
 
   def confirm_friend(user)

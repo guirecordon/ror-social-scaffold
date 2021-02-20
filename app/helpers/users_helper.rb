@@ -19,4 +19,12 @@ module UsersHelper
       render 'friendships/invite', user: user
     end
   end
+
+  def mutual_friends(mutual1,mutual2)
+    mutual = []
+    mutual1.each do |x|
+      mutual1 << x if mutual2.include?(x)
+    end
+    mutual
+  end
 end
