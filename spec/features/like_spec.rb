@@ -24,12 +24,9 @@ RSpec.describe 'webpage workflow', type: :system do
       fill_in('user[email]', with: user.email)
       fill_in('user[password]', with: user.password)
       click_button 'Log in'
-      sleep(3)
       fill_in 'post[content]', with: 'This is my first post'
       click_on 'Save'
-      sleep(5)
       click_on 'Like!'
-      sleep(3)
       expect(page).to have_content('You liked a post.')
     end
   end
