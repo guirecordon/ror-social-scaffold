@@ -326,7 +326,7 @@ form {
 
 @media only screen and (min-width: 480px) {
   form {
-    width: 60%;
+    width: 100%;
   }
 
   .new_post,
@@ -339,7 +339,7 @@ form {
 
 @media (min-width: 780px) {
   form {
-    width: 40%;
+    width: 100%;
   }
 
   .new_post,
@@ -349,3 +349,4 @@ form {
     width: 50%;
   }
 }
+
