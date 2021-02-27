@@ -85,7 +85,6 @@ Go ahead and clone the repo.
 After cloning the repo, you should fire up a server. Open a command line terminal and paste the following command:
 
 - Clone the repository : `git clone <https://github.com/guirecordon/members-only>`
-- Drop the database : `rails db:drop`
 - Create the database: `rails db:create`
 - Run migration: rails `db:migrate`
 - Then serve, `rails serve` or `rails s`

@@ -43,4 +43,10 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  if ENV['RAILS_ENV'] == 'test'
+    require 'simplecov'
+    SimpleCov.start 'rails'
+    puts "required simplecov"
+  end
 end

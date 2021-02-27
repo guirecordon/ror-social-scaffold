@@ -16,9 +16,7 @@ RSpec.describe 'Registration', type: :system do
       fill_in('user[email]', with: 'user@example.com')
       fill_in('user[password]', with: '123456')
       fill_in('user[password_confirmation]', with: '123456')
-      sleep(2)
       click_button('Sign up')
-      sleep(3)
       expect(page).to have_content('Welcome! You have signed up successfully')
     end
   end
@@ -28,17 +26,12 @@ RSpec.describe 'Registration', type: :system do
       visit('/users/sign_in')
       fill_in('user[email]', with: user.email)
       fill_in('user[password]', with: user.password)
-      sleep(2)
       click_button('Log in')
-      sleep(3)
       expect(page).to have_content('Signed in successfully')
-
       fill_in('post[content]', with: 'Example Post')
       click_button('Save')
-      sleep(3)
       click_link('Sign out')
       expect(page).to have_content('You need to sign in or sign up before continuing')
-      sleep(3)
     end
   end
 end

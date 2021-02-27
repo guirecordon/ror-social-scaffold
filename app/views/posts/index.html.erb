@@ -1,7 +1,7 @@
-<aside>
-    <h3> Friendship Requets </h3>
+<aside class = "friend_requests">
+    <h3> Friendship Requests </h3>
     <% current_user.friend_requests.each do |e| %>
-      <%= link_to e.name, user_path(e)%>
+      <%= link_to e.name, user_path(e),class: 'friend_name'%>
     <%end%>
 </aside>
 <%= form_for(@post) do |form| %>

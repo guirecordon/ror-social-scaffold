@@ -25,13 +25,10 @@ RSpec.describe 'webpage workflow', type: :system do
       fill_in('user[email]', with: user.email)
       fill_in('user[password]', with: user.password)
       click_button 'Log in'
-      sleep(3)
       fill_in 'post[content]', with: 'This is my first post'
       click_on 'Save'
-      sleep(5)
       fill_in 'comment[content]', with: 'This is my first comment'
       click_button 'Comment'
-      sleep(3)
       expect(page).to have_content('Comment was successfully created.')
     end
   end
