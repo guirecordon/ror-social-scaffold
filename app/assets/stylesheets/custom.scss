@@ -35,6 +35,95 @@ a {
   color: $primary-color-text;
 }
 
+.nav a {
+  color: $primary-color-light;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+.timeline {
+  width: 100%;
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    margin: 8px 0;
+  }
+
+  .posts {
+    width: 100%;
+  }
+
+  .post {
+    width: 100%;
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post-attribution {
+    float: left;
+
+    .post-author {
+      margin: 0 0 8px 0;
+      color: $primary-color-dark;
+      text-transform: capitalize;
+    }
+  }
+
+  .post-liking {
+    float: right;
+
+    a {
+      color: $primary-color-dark;
+      font-weight: bold;
+      font-size: 0.9em;
+      margin: 0 4px;
+    }
+
+    .post-date {
+      font-size: 0.6em;
+    }
+  }
+
+  .post-content {
+    font-size: 1.1em;
+    padding: 4px 0;
+  }
+
+  .post-comments-section {
+    margin: 5px;
+    width: 90%;
+    margin-left: 10%;
+
+    .post-comments {
+      position: relative;
+      display: flex;
+      border-bottom: 1px solid $divider-color;
+      border-radius: 3px;
+      margin-bottom: 2px;
+      padding: 10px;
+
+      p {
+        font-size: 0.8em;
+        width: 90%;
+      }
+
+      span {
+        position: absolute;
+        right: 3px;
+        font-size: 0.6em;
+      }
+    }
+  }
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -136,6 +225,25 @@ a {
   }
 }
 
+.user-section {
+  width: 100%;
+  margin-left: 16px;
+
+  h2 {
+    text-transform: capitalize;
+  }
+
+  .timeline {
+    width: 100%;
+
+    h3 {
+      width: 100%;
+    }
+
+    justify-content: start;
+  }
+}
+
 form {
   width: 80%;
   margin: 8px 0;
@@ -157,7 +265,7 @@ form {
     }
 
     input[type="checkbox"] {
-      width: fit-content;
+      width: 100%;
     }
   }
 
@@ -176,6 +284,7 @@ form {
     color: $primary-color-light;
     text-transform: uppercase;
     font-weight: 900;
+    font-size: 0.7em;
   }
 
   input[type="submit"]:hover {
@@ -188,91 +297,23 @@ form {
       width: 100%;
     }
   }
+
+  #error_explanation {
+    h2 {
+      color: $primary-color-text;
+      font-size: 1em;
+    }
+
+    ul {
+      color: #f00;
+    }
+  }
 }
 
 .title {
   text-align: center;
   margin-bottom: 16px;
   text-transform: capitalize;
-}
-
-.timeline {
-  width: 100%;
-  margin: 16px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  h3 {
-    margin: 8px 0;
-  }
-
-  .posts {
-    width: 100%;
-  }
-
-  .post {
-    width: 100%;
-    margin: 16px 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .post-attribution {
-    float: left;
-
-    .post-author {
-      margin: 0 0 8px 0;
-      color: $primary-color-dark;
-      text-transform: capitalize;
-    }
-  }
-
-  .post-liking {
-    float: right;
-
-    a {
-      color: $primary-color-dark;
-      font-weight: bold;
-      font-size: 0.9em;
-      margin: 0 4px;
-    }
-
-    .post-date {
-      font-size: 0.6em;
-    }
-  }
-
-  .post-content {
-    font-size: 1.1em;
-    padding: 4px 0;
-  }
-
-  .post-comments-section {
-    margin: 5px;
-    width: 90%;
-    margin-left: 10%;
-
-    .post-comments {
-      position: relative;
-      display: flex;
-      border-bottom: 1px solid $divider-color;
-      border-radius: 3px;
-      margin-bottom: 2px;
-      padding: 10px;
-
-      p {
-        font-size: 0.8em;
-        width: 90%;
-      }
-
-      span {
-        position: absolute;
-        right: 3px;
-        font-size: 0.6em;
-      }
-    }
-  }
 }
 
 .users-section {
@@ -292,23 +333,18 @@ form {
   }
 }
 
-.user-section {
+.friend_requests {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
-  margin-left: 16px;
+}
 
-  h2 {
-    text-transform: capitalize;
-  }
-
-  .timeline {
-    width: 100%;
-
-    h3 {
-      width: 100%;
-    }
-
-    justify-content: start;
-  }
+.friend_name {
+  color: #689f38;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 #error_explanation {
@@ -324,7 +360,7 @@ form {
 
 @media only screen and (min-width: 480px) {
   form {
-    width: 60%;
+    width: 40%;
   }
 
   .new_post,
@@ -337,7 +373,7 @@ form {
 
 @media (min-width: 780px) {
   form {
-    width: 40%;
+    width: 60%;
   }
 
   .new_post,
