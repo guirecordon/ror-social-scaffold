@@ -276,6 +276,7 @@ form {
     color: $primary-color-light;
     text-transform: uppercase;
     font-weight: 900;
+    font-size: 0.7em;
   }
 
   input[type="submit"]:hover {
@@ -324,9 +325,23 @@ form {
   }
 }
 
+.friend_requests {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.friend_name {
+  color: #689f38;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 @media only screen and (min-width: 480px) {
   form {
-    width: 60%;
+    width: 40%;
   }
 
   .new_post,
@@ -339,7 +354,7 @@ form {
 
 @media (min-width: 780px) {
   form {
-    width: 40%;
+    width: 60%;
   }
 
   .new_post,

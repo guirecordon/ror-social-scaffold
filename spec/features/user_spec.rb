@@ -19,13 +19,10 @@ RSpec.describe 'webpage workflow', type: :system do
     it 'sends a friend request' do
       visit '/users/sign_in'
       click_link 'Sign in'
-
       fill_in('user[email]', with: user.email)
       fill_in('user[password]', with: user.password)
       click_button 'Log in'
-      sleep(3)
       click_on 'All users'
-      sleep(3)
       expect(page).to have_text('Name')
     end
   end

@@ -27,6 +27,11 @@
 /config/master.key
 
 # .gitignore
+<<<<<<< HEAD
 node_modules/
 
 coverage/
+=======
+node_modules/coverage
+coverage
+>>>>>>> a5c1f071155c37c339245e034822a9c76f375731

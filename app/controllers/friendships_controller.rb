@@ -14,6 +14,7 @@ class FriendshipsController < ApplicationController
   def update
     friendship = Friendship.find(params[:id])
     friendship.update!(confirmed: true)
+    friendship.save
     redirect_to user_path(friendship.user_id)
   end
 
