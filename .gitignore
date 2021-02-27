@@ -28,3 +28,5 @@
 
 # .gitignore
 node_modules/
+
+coverage/
