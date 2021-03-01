@@ -95,6 +95,9 @@ After that, open your browser and type the following in your address bar:
 
 That will take you to the main form where you can create a new user. Fill out all the fields. If they pass validation, the form should be emptied out. Otherwise, you should get an error message on top of your form.
 
+## Live Demo
+
+[Live Demo](https://sleepy-wildwood-93053.herokuapp.com/)
 
 ### Built With
 * Ruby
